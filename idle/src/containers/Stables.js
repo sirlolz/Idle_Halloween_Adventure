@@ -24,6 +24,7 @@ class Quests extends React.Component {
         return (
             <div>
                 <h3>welcome to the stables</h3>
+                <p>might as well play a cli app instead of jumping on the horse and fighting the <b><em>EVIL</em></b> in this world</p>
                 <div>{this.MonsterTravelButton()}</div>
             </div>)
     }

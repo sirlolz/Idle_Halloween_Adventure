@@ -4,7 +4,7 @@ export default class MonsterCard extends React.Component {
         return <div>
                 <h3>{this.props.monster.name}</h3>
                 <p>{this.props.monster.hp}</p>
-                <button> travel to {this.props.monster.name}'s lair</button>
+                <button> travel to <b>{this.props.monster.name}</b>'s lair</button>
             </div>
     }
 }
