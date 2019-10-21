@@ -1,7 +1,7 @@
 import React from 'react'
 import MonsterCard from "../components/MonsterCard"
-class Quests extends React.Component {
-
+class Stables extends React.Component {
+  
     state = {
         monster: []
     }
@@ -29,4 +29,4 @@ class Quests extends React.Component {
             </div>)
     }
 }
-export default Quests
+export default Stables
