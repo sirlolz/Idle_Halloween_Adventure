@@ -1,5 +1,5 @@
 import React from 'react'
-class Quests extends React.Component {
+class Stables extends React.Component {
     
 }
-export default Quests
+export default Stables

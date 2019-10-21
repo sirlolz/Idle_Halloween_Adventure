@@ -1,47 +1,72 @@
 import React from 'react';
-// import logo from './logo.svg';
 import '../src/css/App.css';
 import Town from './containers/Town'
 class App extends React.Component {
-  state={
-    showtown: false
+  
+  state = {
+      loggedin: false,
+      showtown: false
   }
-  handleClick=()=>{
-    console.log("town")
+
+  handleSubmit=()=>{
+    this.setState({
+      loggedin: true
+    })
+    console.log("handlesubit")
+  }
+
+  handleClickTown=()=>{
     this.setState({
       showtown: true
     })
+    console.log("showtown", this.state.showtown)
   }
-  returnTown=()=>{
-    return this.state.showtown ? <Town />
-    : 
-    <img 
-    className="Enter"
-    onClick={this.handleClick}
-    src='https://www.iconspng.com/images/rpg-map-symbols-city/rpg-map-symbols-city.jpg'  
-    alt="logo" />
-  }
-  render(){
-    return (
-    <div>
-      {/* <p>
-          Welcome to Idle Halloween Adventure
-        </p> */}
-        {this.returnTown()}
-        
-        
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      
-    </div>
-  );}
-  
-}
 
+  render() {
+    return ( 
+      
+      this.state.loggedin ?
+      
+      
+      <Town/>
+      :
+      <form>
+          <div className="login">
+            <h1>Welcome to Idle Halloween Adventure</h1>
+            <input 
+            type="text" 
+            placeholder="            Username" 
+            onChange={this.handleChangeUsername}/>
+            <input 
+            type="text" 
+            placeholder="            Password" 
+            onChange={this.handleChangePassword}/>
+            <button type="button" onClick={()=>this.handleSubmit()}>Login</button>
+            
+          </div>
+          <img 
+      className="Enter"
+      src='https://www.iconspng.com/images/rpg-map-symbols-city/rpg-map-symbols-city.jpg'  
+      alt="city" />
+      </form>          
+    )
+  }
+
+
+  // returnTown=()=>{
+  //   return this.state.loggedin ? <Town />
+  //   : 
+  //   <img 
+  //   className="Enter"
+  //   onClick={this.handleClick}
+  //   src='https://www.iconspng.com/images/rpg-map-symbols-city/rpg-map-symbols-city.jpg'  
+  //   alt="city" />
+  // }
+  // render(){
+  //   return (
+  //   <div>
+  //       {this.returnTown()}
+  //   </div>
+  // );}
+}
 export default App;
