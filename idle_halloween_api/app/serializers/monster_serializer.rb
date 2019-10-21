@@ -1,3 +1,3 @@
 class MonsterSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :hp, :att
 end
