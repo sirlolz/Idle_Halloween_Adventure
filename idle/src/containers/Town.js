@@ -7,11 +7,23 @@ import TavernInn from './TavernInn'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 class Town extends React.Component{
-    render(){
-        return(
-            <Router>
-             <div className="gallery">
+    state = {
+        blacksmith: false,
+        tavern: false,
+        stables: false,
+        warehouse: false
+    }
 
+    handleClick = () => {
+        this.setState({stable: !this.state.stable})
+    }
+    render(){
+
+        if (this.state.stables === true){
+            return <Stables />
+        }
+        return(    
+            <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
                     <Link to="/blacksmithstore">
 
@@ -30,7 +42,7 @@ class Town extends React.Component{
 
                 <figure className="gallery__item gallery__item--3">
                     {/* <Route to="/stables" component={Stables}/> */}
-                    <img src="https://cdn.pixabay.com/photo/2012/05/07/17/05/building-48709_960_720.png" 
+                    <img onClick={() =>this.handleClick()}src="https://cdn.pixabay.com/photo/2012/05/07/17/05/building-48709_960_720.png" 
                     className="gallery__img" 
                     alt="stables"/>
                 </figure>
