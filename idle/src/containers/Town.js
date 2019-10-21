@@ -1,8 +1,21 @@
 import React from 'react'
 import '../css/Town.css'
-import BlacksmithStore from './BlacksmithStore' 
+import Quest from './Stables' 
 class Town extends React.Component{
+    state = {
+        blacksmith: false,
+        tavern: false,
+        stable: false,
+        warehouse: false
+    }
+
+    handleClick = () => {
+        this.setState({stable: !this.state.stable})
+    }
     render(){
+        if (this.state.stable === true){
+            return <Quest />
+        }
         return(    
             <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
@@ -16,7 +29,7 @@ class Town extends React.Component{
                     alt="taverninn"/>
                 </figure>
                 <figure className="gallery__item gallery__item--3">
-                    <img src="https://cdn.pixabay.com/photo/2012/05/07/17/05/building-48709_960_720.png" 
+                    <img onClick={() =>this.handleClick()}src="https://cdn.pixabay.com/photo/2012/05/07/17/05/building-48709_960_720.png" 
                     className="gallery__img" 
                     alt="stables"/>
                 </figure>
