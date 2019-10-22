@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 2019_10_21_180804) do
     t.string "description"
     t.integer "att"
     t.integer "hp"
+    t.integer "sellprice"
+    t.integer "buyprice"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_10_21_180804) do
     t.string "name"
     t.integer "hp"
     t.integer "att"
+    t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

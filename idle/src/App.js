@@ -32,22 +32,27 @@ class App extends React.Component {
       :
       <form>
           <div className="login">
-            <h1>Welcome to Idle Halloween Adventure</h1>
-            <input 
-            type="text" 
-            placeholder="            Username" 
-            onChange={this.handleChangeUsername}/>
-            <input 
-            type="text" 
-            placeholder="            Password" 
-            onChange={this.handleChangePassword}/>
+            <h1>Idle Halloween Adventure</h1>
+            <div>
+              <input 
+              type="text" 
+              placeholder="            Username" 
+              onChange={this.handleChangeUsername}/>
+              <input 
+              type="text" 
+              placeholder="            Password" 
+              onChange={this.handleChangePassword}/>
+            </div>
             <button type="button" onClick={()=>this.handleSubmit()}>Login</button>
             
           </div>
+          <div className="citypic">
           <img 
       className="Enter"
       src='https://www.iconspng.com/images/rpg-map-symbols-city/rpg-map-symbols-city.jpg'  
       alt="city" />
+
+          </div>
       </form>          
     )
   }
