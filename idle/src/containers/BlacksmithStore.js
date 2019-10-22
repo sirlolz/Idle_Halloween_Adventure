@@ -1,4 +1,5 @@
 import React from 'react'
+import Items from '../components/Items'
 class BlacksmithStore extends React.Component {
     state = {
         forSale: []
@@ -16,11 +17,28 @@ class BlacksmithStore extends React.Component {
     // componentDidMount(){
     //     this.showForSale
     // }
+        items: []
+    }
+
+    renderItems = () => {
+        return this.state.items.map((item, key)=> {
+           return <Items item={item} key={key} />
+        })
+    }
+
+    componentWillMount () {
+        this.getItems()
+    }
+
     render(){
         
         return(
             <div>
-                
+                items here
+                <div>
+                {this.renderItems()}
+                </div>
+                {/* need to render each item individually use map */}
             </div>
         )
     }
