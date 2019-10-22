@@ -24,7 +24,7 @@ class Town extends React.Component{
 
                 <figure className="gallery__item 2">
                     <Link to="/taverninn">
-                    <img src="https://png2.cleanpng.com/sh/402783dc704200a9b1f672db8b1c06d0/L0KzQYm3VMAyN5DuiZH0aYP2gLBuTflvdl51jdQ2Y3zsgH7okwQudZZpgddBYXywRbLqUMk5OGo5UaptNUCxRYi5U8k5OWo2TaQ7NUe0Qoi6U8AyO191htk=/kisspng-inn-pub-clip-art-medieval-5ac09809498d50.5723981915225712733013.png" 
+                    <img src="https://1001freedownloads.s3.amazonaws.com/vector/thumb/136202/nicubunu_RPG_map_symbols_Inn.png" 
                     className="gallery__img" 
                     alt="taverninn"/>
                     </Link>
