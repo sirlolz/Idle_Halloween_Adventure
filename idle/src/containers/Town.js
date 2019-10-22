@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Town.css'
+import MonsterFight from "../components/MonsterFight"
 import BlacksmithStore from './BlacksmithStore' 
 import Warehouse from './Warehouse'
 import Stables from './Stables'
@@ -7,24 +8,24 @@ import TavernInn from './TavernInn'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 class Town extends React.Component{
-    state = {
-        blacksmith: false,
-        tavern: false,
-        stables: false,
-        warehouse: false
-    }
+    // state = {
+    //     blacksmith: false,
+    //     tavern: false,
+    //     stables: false,
+    //     warehouse: false,
+    // }
 
-    handleClick = () => {
-        this.setState({stable: !this.state.stable})
+    // handleClick = () => {
+    //     this.setState({stable: !this.state.stable})
         
-    }
+    // }
     render(){
 
-        if (this.state.stables === true){
-            return <Stables />
-        }
+        // if (this.state.stables === true){
+        //     return <Stables />
+        // }
         return(    
-            <Router>
+            // <Router>
             <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
                     <Link to="/blacksmithstore">
@@ -59,9 +60,12 @@ class Town extends React.Component{
                     </Link>
                 </figure>
 
-                <Switch>
-                    <Route path="/blacksmithstore">
+                {/* <Switch> */}
+                    {/* <Route path="/blacksmithstore">
                         <BlacksmithStore />
+                    </Route>
+                    <Route path="monsterFight">
+                        <MonsterFight />
                     </Route>
                     <Route path="/stables">
                         <Stables />
@@ -71,11 +75,11 @@ class Town extends React.Component{
                     </Route>
                     <Route path="/warehouse">
                         <Warehouse />
-                    </Route>
-                </Switch>
+                    </Route> */}
+                {/* </Switch> */}
 
             </div>   
-        </Router>    
+        // </Router>    
             
         )
     }

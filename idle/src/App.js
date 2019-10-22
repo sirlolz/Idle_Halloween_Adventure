@@ -25,10 +25,11 @@ class App extends React.Component {
   render() {
     return ( 
       
-      this.state.loggedin ?
+    this.state.loggedin ?
       
       
       <Town/>
+      
       :
       <form>
           <div className="login">
