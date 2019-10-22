@@ -24,8 +24,7 @@ class Town extends React.Component{
         // if (this.state.stables === true){
         //     return <Stables />
         // }
-        return(    
-            // <Router>
+        return(   
             <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
                     <Link to="/blacksmithstore">
@@ -59,28 +58,7 @@ class Town extends React.Component{
                     alt="warehouse"/>
                     </Link>
                 </figure>
-
-                {/* <Switch> */}
-                    {/* <Route path="/blacksmithstore">
-                        <BlacksmithStore />
-                    </Route>
-                    <Route path="monsterFight">
-                        <MonsterFight />
-                    </Route>
-                    <Route path="/stables">
-                        <Stables />
-                    </Route>
-                    <Route path="/taverninn">
-                        <TavernInn />
-                    </Route>
-                    <Route path="/warehouse">
-                        <Warehouse />
-                    </Route> */}
-                {/* </Switch> */}
-
-            </div>   
-        // </Router>    
-            
+            </div>
         )
     }
 }

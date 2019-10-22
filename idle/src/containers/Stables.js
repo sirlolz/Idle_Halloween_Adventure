@@ -8,13 +8,13 @@ class Stables extends React.Component {
     }
 
     getMonster = () => {
-        fetch("http://localhost:3000/monsters").then(r => r.json()).then(d => this.setState({monster: d}))
+        fetch("http://localhost:3000/monsters").then(response => response.json()).then(data => this.setState({monster: data}))
     }
 
     MonsterTravelButton = () => {
         return this.state.monster.map( (monster, key)=>{
             return (<div>
-                    <MonsterCard key={key} monster={monster}/>
+                    <MonsterCard key={key} monster={monster} fight={this.props.fight}/>
                 </div>)
         })
     }

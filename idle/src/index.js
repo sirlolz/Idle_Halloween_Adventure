@@ -22,11 +22,11 @@ const routing = (
             <Route path="/blacksmithstore">
                         <BlacksmithStore />
                     </Route>
-                    <Route path="/monsterFight">
-                        <MonsterFight />
-                    </Route>
+                    <Route path="/monsterFight"
+                        render={(props) => <MonsterFight {...props} me={"me"} />}
+                    />
                     <Route path="/stables">
-                        <Stables />
+                        <Stables/>
                     </Route>
                     <Route path="/town/taverninn">
                         <TavernInn />
