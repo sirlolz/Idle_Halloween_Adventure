@@ -23,13 +23,8 @@ class Town extends React.Component{
         if (this.state.stables === true){
             return <Stables />
         }
-<<<<<<< HEAD
-        return(   
-            <Router> 
-=======
         return(    
             <Router>
->>>>>>> 2b50f1c35e0196fb74db42bbeb181b18dc3be9ef
             <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
                     <Link to="/blacksmithstore">
