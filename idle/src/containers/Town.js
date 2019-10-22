@@ -53,7 +53,7 @@ class Town extends React.Component{
 
                 <figure className="gallery__item gallery__item--4">
                     <Link to="/warehouse">
-                    <img src="https://cdn.pixabay.com/photo/2012/05/07/17/10/building-48716_960_720.png" 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2KZRY5McbYibQryHjXNJgnRsMYFtQMlnC2Vtn-Wp31MbWIqI9&s" 
                     className="gallery__img" 
                     alt="warehouse"/>
                     </Link>
