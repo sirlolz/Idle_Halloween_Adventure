@@ -8,22 +8,7 @@ import TavernInn from './TavernInn'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 class Town extends React.Component{
-    // state = {
-    //     blacksmith: false,
-    //     tavern: false,
-    //     stables: false,
-    //     warehouse: false,
-    // }
-
-    // handleClick = () => {
-    //     this.setState({stable: !this.state.stable})
-        
-    // }
     render(){
-
-        // if (this.state.stables === true){
-        //     return <Stables />
-        // }
         return(   
             <div className="gallery">
                 <figure className="gallery__item gallery__item--1">

@@ -5,6 +5,10 @@ export default class MonsterFight extends React.Component {
         monster: this.props.location.state.monster
     }
     render () {
-        return (<div>{this.state.monster.name}</div>)
+        return (
+        <div>
+            {this.state.monster.name} HP:{this.state.monster.hp}
+        </div>
+        )
     }
 }
