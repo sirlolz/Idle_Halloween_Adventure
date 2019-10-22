@@ -32,7 +32,7 @@ class App extends React.Component {
       :
       <form>
           <div className="login">
-            <h1 className="Welcome">Welcome to Idle Halloween Adventure</h1>
+            <h1>Idle Halloween Adventure</h1>
             <div>
               <input 
               type="text" 
@@ -46,10 +46,13 @@ class App extends React.Component {
             <button type="button" onClick={()=>this.handleSubmit()}>Login</button>
             
           </div>
+          <div className="citypic">
           <img 
       className="Enter"
       src='https://www.iconspng.com/images/rpg-map-symbols-city/rpg-map-symbols-city.jpg'  
       alt="city" />
+
+          </div>
       </form>          
     )
   }
