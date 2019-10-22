@@ -12,6 +12,7 @@ const routing = (
             {/* <Link to="/">{<img src/>}</Link>     */}
             <Route exact path="/" component={App} />
             {/* <Route path="/home" component={App} /> */}
+            
         </div>
     </Router>
 )
