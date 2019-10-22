@@ -16,14 +16,20 @@ class Town extends React.Component{
 
     handleClick = () => {
         this.setState({stable: !this.state.stable})
+        
     }
     render(){
 
         if (this.state.stables === true){
             return <Stables />
         }
+<<<<<<< HEAD
         return(   
             <Router> 
+=======
+        return(    
+            <Router>
+>>>>>>> 2b50f1c35e0196fb74db42bbeb181b18dc3be9ef
             <div className="gallery">
                 <figure className="gallery__item gallery__item--1">
                     <Link to="/blacksmithstore">
@@ -35,32 +41,46 @@ class Town extends React.Component{
                 </figure> 
 
                 <figure className="gallery__item gallery__item--2">
-                    {/* <Route to="/taverninn" component={TavernInn}/> */}
+                    <Link to="/taverninn">
                     <img src="https://png2.cleanpng.com/sh/402783dc704200a9b1f672db8b1c06d0/L0KzQYm3VMAyN5DuiZH0aYP2gLBuTflvdl51jdQ2Y3zsgH7okwQudZZpgddBYXywRbLqUMk5OGo5UaptNUCxRYi5U8k5OWo2TaQ7NUe0Qoi6U8AyO191htk=/kisspng-inn-pub-clip-art-medieval-5ac09809498d50.5723981915225712733013.png" 
                     className="gallery__img" 
                     alt="taverninn"/>
+                    </Link>
                 </figure>
 
                 <figure className="gallery__item gallery__item--3">
-                    {/* <Route to="/stables" component={Stables}/> */}
-                    <img onClick={() =>this.handleClick()}src="https://cdn.pixabay.com/photo/2012/05/07/17/05/building-48709_960_720.png" 
+                    <Link to="/stables">
+                    <img onClick={() =>this.handleClick}src="https://cdn.pixabay.com/photo/2012/05/07/17/05/building-48709_960_720.png" 
                     className="gallery__img" 
                     alt="stables"/>
+                    </Link>
                 </figure>
 
                 <figure className="gallery__item gallery__item--4">
-                    {/* <Route to="/blacksmithstore" component={BlacksmithStore}/> */}
+                    <Link to="/warehouse">
                     <img src="https://cdn.pixabay.com/photo/2012/05/07/17/10/building-48716_960_720.png" 
                     className="gallery__img" 
                     alt="warehouse"/>
+                    </Link>
                 </figure>
 
                 <Switch>
-                    <Route path="/blacksmithstore" component={BlacksmithStore}/>
+                    <Route path="/blacksmithstore">
+                        <BlacksmithStore />
+                    </Route>
+                    <Route path="/stables">
+                        <Stables />
+                    </Route>
+                    <Route path="/taverninn">
+                        <TavernInn />
+                    </Route>
+                    <Route path="/warehouse">
+                        <Warehouse />
+                    </Route>
                 </Switch>
 
             </div>   
-            </Router>    
+        </Router>    
             
         )
     }
