@@ -6,7 +6,7 @@ class BlacksmithStore extends React.Component {
     }
 
     getItems = () => {
-        fetch("http://localhost:3000/items").then(r => r.json()).then(d => this.setState({items:d}))
+        fetch("http://localhost:3000/items").then(r => r.json()).then(d => this.setState({forSale:d}))
     }
 
     // showForSale=()=>{
@@ -17,11 +17,9 @@ class BlacksmithStore extends React.Component {
     // componentDidMount(){
     //     this.showForSale
     // }
-        items: []
-    }
 
     renderItems = () => {
-        return this.state.items.map((item, key)=> {
+        return this.state.forSale.map((item, key)=> {
            return <Items item={item} key={key} />
         })
     }
