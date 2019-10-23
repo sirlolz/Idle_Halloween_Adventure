@@ -6,19 +6,18 @@ import Warehouse from './Warehouse'
 import Stables from './Stables'
 import TavernInn from './TavernInn'
 import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import blacksmithstore from '../images/blacksmithstore.png'
 
 class Town extends React.Component{
-  
     render(){
 
         return(    
             <div className="gallery">
                 <figure className="gallery__item 1">
                     <Link to="/blacksmithstore">
-
-                    <img src="https://www.iconspng.com/images/rpg-map-symbols-blacksmith/rpg-map-symbols-blacksmith.jpg" 
+                    <img src={blacksmithstore}
                     className="gallery__img" 
-                    alt="blacksmithstore"/>
+                    alt="blacksmithstore"  width="100" height="50"/>
                     </Link>
                 </figure> 
 
