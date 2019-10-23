@@ -1,20 +1,22 @@
 import React from 'react'
-import MonsterView from './MonsterFight'
 export default class MonsterFight extends React.Component {
+    state = {
+        hp: this.props.monster.hp,
+        name: this.props.monster.name
+    }
 
-    // constructor(props) {
-    //     super()
-    //     this.state = {
-    //         monster: props.location.state.monster
-    //     }
+    handleClick = () => {
+        this.interval = setInterval(()=>{console.log(this.state)},1000)
+    }
 
-    // }
     render() {
-        // console.log(this.props.location.state.monster)
-        // const monster = this.props.location.state.monster;
         return (
             <div>
-                {/* {this.state.monster.name} HP:{this.state.monster.hp} */}
+                <h1>
+                    {this.state.name}
+                </h1>
+                <h2>{this.state.hp}</h2>
+                <button onClick={()=>{this.handleClick()}}>start fight</button>
             </div>
         )
     }

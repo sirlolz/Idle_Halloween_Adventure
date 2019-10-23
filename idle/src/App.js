@@ -9,6 +9,7 @@ import Warehouse from './containers/Warehouse';
 import BlacksmithStore from './containers/BlacksmithStore';
 import Stables from './containers/Stables';
 import TavernInn from './containers/TavernInn';
+import MonsterFight from './components/MonsterFight'
 class App extends React.Component {
 
   state = {
@@ -31,6 +32,7 @@ class App extends React.Component {
         <Route exact path="/blacksmithstore" render={() => <BlacksmithStore />} />
         <Route exact path="/stables" render={() => <Stables monster={this.state.currentMonster} onMonsterClick={this.onMonsterClick}/>} />
         <Route exact path="/taverninn" render={() => <TavernInn />} />
+        <Route exact path="/monsterfight" render={() => <MonsterFight monster={this.state.currentMonster}/>} />
       </div>
     </Router>
     )
