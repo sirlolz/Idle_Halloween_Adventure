@@ -1,6 +1,5 @@
 import React from 'react'
-import MonsterFight from '../components/MonsterFight'
-import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 export default class MonsterCard extends React.Component {
     state = {
 
