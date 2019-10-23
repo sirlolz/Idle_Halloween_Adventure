@@ -9,8 +9,11 @@ import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import blacksmithstore from '../images/blacksmithstore.png'
 
 class Town extends React.Component{
+  
     render(){
-        return(   
+
+        return(    
+
             <div className="gallery">
                 <figure className="gallery__item 1">
                     <Link to="/blacksmithstore">
@@ -43,7 +46,8 @@ class Town extends React.Component{
                     alt="warehouse"/>
                     </Link>
                 </figure>
-            </div>
+
+            </div>   
         )
     }
 }
