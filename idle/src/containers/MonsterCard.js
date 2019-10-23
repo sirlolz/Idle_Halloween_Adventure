@@ -9,10 +9,9 @@ export default class MonsterCard extends React.Component {
         return ( 
        
             <div>
-                <h3>{this.props.monster.name}</h3>
-                <p>{this.props.monster.hp}</p>
-                <Link to="/monsterfight">
-                    <button> travel to <b>{this.props.monster.name}</b>'s lair</button>
+                <h3>I am {this.props.monster.name}</h3>
+                <Link to={{pathname: "/monsterfight", state: {monster: this.props.monster}}}>
+                    <button> <b>come battle me</b></button>
                 </Link>
             </div>
 
