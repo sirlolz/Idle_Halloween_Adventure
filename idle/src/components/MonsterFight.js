@@ -37,7 +37,7 @@ export default class MonsterFight extends React.Component {
                     {this.state.name}
                 </h1>
                 {   this.state.hp > 0 ?
-                        <h2>{this.state.hp}</h2>
+                        <h2>hp: {this.state.hp}</h2>
                     :
                         clearInterval(this.interval)
                 }
