@@ -7,7 +7,7 @@ class Town extends React.Component{
     render(){
 
         return(    
-
+            
             <div className="gallery">
                 <figure className="gallery__item 1">
                     <Link to="/blacksmithstore">
