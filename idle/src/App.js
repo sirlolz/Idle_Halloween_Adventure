@@ -25,7 +25,8 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-      <div>
+        <div>
+        
         <Town />
         <Route exact path="/" render={() => <div>Home</div>} />
         <Route exact path="/warehouse" render={() => <Warehouse />} />
@@ -34,6 +35,8 @@ class App extends React.Component {
         <Route exact path="/taverninn" render={() => <TavernInn />} />
         <Route exact path="/monsterfight" render={() => <MonsterFight monster={this.state.currentMonster}/>} />
       </div>
+      
+      
     </Router>
     )
   }

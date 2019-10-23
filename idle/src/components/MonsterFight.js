@@ -2,11 +2,32 @@ import React from 'react'
 export default class MonsterFight extends React.Component {
     state = {
         hp: this.props.monster.hp,
-        name: this.props.monster.name
+        name: this.props.monster.name,
+        att: 0
     }
 
+    //this needs to fetch the users info
+    fetchUserInfo = () => {
+        this.setState({att: 2})
+    }
+
+
+    //on click of fight button decreases monster hp stored in state by users att
     handleClick = () => {
-        this.interval = setInterval(()=>{console.log(this.state)},1000)
+        this.setState({hp:this.props.monster.hp})
+        this.interval = setInterval(()=>{this.setState({hp: (this.state.hp - this.state.att)})},1000)
+    }
+
+    //resets monster hp
+    //clears fight interval
+    //needs to update user on the backend with loot
+    resetUpdateFight = () => {
+        this.setState({hp:this.props.monster.hp})
+    }
+
+    //upon mounting get users info from backend
+    componentDidMount() {
+        this.fetchUserInfo()
     }
 
     render() {
@@ -15,8 +36,20 @@ export default class MonsterFight extends React.Component {
                 <h1>
                     {this.state.name}
                 </h1>
-                <h2>{this.state.hp}</h2>
-                <button onClick={()=>{this.handleClick()}}>start fight</button>
+                {   this.state.hp > 0 ?
+                        <h2>{this.state.hp}</h2>
+                    :
+                        clearInterval(this.interval)
+                }
+                {this.state.name ?(
+                    <button onClick={()=>{this.handleClick()}}>start fight</button>
+                )
+                :
+                (
+                    <p>looks like no one is here come back later</p>
+                )
+                }
+
             </div>
         )
     }
