@@ -12,15 +12,13 @@ class Stables extends React.Component {
     }
 
     MonsterTravelButton = () => {
-        return this.state.monster.map( (monster, key)=>{
-            return (<div>
-                    <MonsterCard key={key} monster={monster} fight={this.props.fight}/>
-                </div>)
+        return this.state.monster.map( (monster, index)=>{
+            return <MonsterCard key={index} monster={monster} onMonsterClick={this.props.onMonsterClick}/>
         })
     }
 
 
-    componentWillMount() {
+    componentDidMount() {
         this.getMonster()
     }
     render () {
