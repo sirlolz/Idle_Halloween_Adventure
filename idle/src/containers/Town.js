@@ -1,12 +1,6 @@
 import React from 'react'
 import '../css/Town.css'
-import MonsterFight from "../components/MonsterFight"
-import BlacksmithStore from './BlacksmithStore' 
-import Warehouse from './Warehouse'
-import Stables from './Stables'
-import TavernInn from './TavernInn'
-import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import blacksmithstore from '../images/blacksmithstore.png'
+import { Link } from 'react-router-dom'
 
 class Town extends React.Component{
   

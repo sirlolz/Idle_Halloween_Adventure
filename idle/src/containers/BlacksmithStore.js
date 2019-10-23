@@ -29,7 +29,6 @@ class BlacksmithStore extends React.Component {
     }
 
     render(){
-        
         return(
             <div>
                 items here

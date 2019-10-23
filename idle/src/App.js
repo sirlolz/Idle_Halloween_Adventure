@@ -37,7 +37,7 @@ class App extends React.Component {
         <Town />
         <Route exact path="/" render={() => <div>Home</div>} />
         <Route exact path="/warehouse" render={() => <Warehouse />} />
-        <Route exact path="/blacksmith" render={() => <BlacksmithStore />} />
+        <Route exact path="/blacksmithstore" render={() => <BlacksmithStore />} />
         <Route exact path="/stables" render={() => <Stables />} />
         <Route exact path="/taverninn" render={() => <TavernInn />} />
 
