@@ -1,6 +1,6 @@
 import React from 'react'
-class TavernInn extends React.Component {
-    redner () {
+export default class TavernInn extends React.Component {
+    render () {
         return (
             <div>
                 save here
@@ -9,4 +9,4 @@ class TavernInn extends React.Component {
         )
     }
 }
-export default TavernInn
+// export default TavernInn
