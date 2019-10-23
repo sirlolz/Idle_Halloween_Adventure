@@ -1,5 +1,6 @@
 .gallery {
-    width: 0%;
+    width: 15%;
+    /* height: 100%; */
     display: grid;
     grid-template-rows: repeat(4, 11vw);
     position: fixed;
@@ -13,5 +14,6 @@
 }
 
 .gallery__item {
-    margin: 0
+    margin: 0;
+    object-fit: contain
 }
