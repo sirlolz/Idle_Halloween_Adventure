@@ -23,7 +23,10 @@ const routing = (
                         <BlacksmithStore />
                     </Route>
                     <Route path="/monsterFight"
-                        render={(props) => <MonsterFight {...props} me={"me"} />}
+                        render={(props) => {
+                        console.log(props)
+                        return <MonsterFight {...props} me={"me"} />
+                    }}
                     />
                     <Route path="/stables">
                         <Stables/>
