@@ -10,12 +10,26 @@ import BlacksmithStore from './containers/BlacksmithStore';
 import Stables from './containers/Stables';
 import TavernInn from './containers/TavernInn';
 import MonsterFight from './components/MonsterFight'
+import Login from './components/Login'
+import UserHome from './components/UserHome'
 class App extends React.Component {
 
   state = {
       loggedin: false,
       showtown: false,
-      currentMonster: {}
+      currentMonster: {},
+      currentUser: {}
+  }
+
+  onLogin = user => {
+    fetch( fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers:{
+          "Content-Type": "application/json",
+                  "Accept": "application/json"
+              },
+              body: JSON.stringify({name: user})
+  })).then(response => response.json())
   }
 
   onMonsterClick = monster =>{
@@ -27,10 +41,13 @@ class App extends React.Component {
       <Router>
         <div>
         <Town />
-        <Route exact path="/" render={() => <div>Home</div>} />
+        <Route exact path="/" render={() => <UserHome />} />
+        <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} />
         <Route exact path="/shack" render={() => <Shack />} />
         <Route exact path="/blacksmithstore" render={() => <BlacksmithStore />} />
-        <Route exact path="/stables" render={() => <Stables monster={this.state.currentMonster} onMonsterClick={this.onMonsterClick}/>} />
+        <Route exact path="/stables" render={() =>{
+          return <Stables monster={this.state.currentMonster} onMonsterClick={this.onMonsterClick}/>} 
+          } />
         <Route exact path="/taverninn" render={() => <TavernInn />} />
         <Route exact path="/monsterfight" render={() => <MonsterFight monster={this.state.currentMonster}/>} />
         </div>
