@@ -5,6 +5,7 @@ class CreateMonsters < ActiveRecord::Migration[5.2]
       t.integer :hp
       t.integer :att
       t.string :img
+      t.integer :loot, :default => 5
 
       t.timestamps
     end

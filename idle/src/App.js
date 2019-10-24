@@ -22,18 +22,22 @@ class App extends React.Component {
   }
 
   onLogin = user => {
-    fetch( fetch("http://localhost:3000/users", {
+    return fetch("http://localhost:3000/users", {
       method: "POST",
       headers:{
           "Content-Type": "application/json",
                   "Accept": "application/json"
               },
               body: JSON.stringify({name: user})
-  })).then(response => response.json())
+  }).then(response => {return response.json()}).then(data => this.setState({currentUser:{...data}}))
   }
 
   onMonsterClick = monster =>{
     this.setState({currentMonster:{...monster}})
+  }
+
+  onFightWin = () => {
+    
   }
 
   render() {
@@ -41,7 +45,7 @@ class App extends React.Component {
       <Router>
         <div>
         <Town />
-        <Route exact path="/" render={() => <UserHome />} />
+        <Route exact path="/" render={() => <UserHome currentUser={this.state.currentUser}/>} />
         <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} />
         <Route exact path="/shack" render={() => <Shack />} />
         <Route exact path="/blacksmithstore" render={() => <BlacksmithStore />} />

@@ -35,15 +35,17 @@ ActiveRecord::Schema.define(version: 2019_10_21_180804) do
     t.integer "hp"
     t.integer "att"
     t.string "img"
+    t.integer "loot", default: 5
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "level"
-    t.integer "hp"
-    t.integer "att"
+    t.integer "level", default: 1
+    t.integer "hp", default: 10
+    t.integer "att", default: 1
+    t.integer "purse", default: 5
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

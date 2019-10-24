@@ -47,6 +47,7 @@ export default class MonsterFight extends React.Component {
                         <h2>{this.props.monster.name} has {this.state.hp} hp remaining!</h2>
                     :
                         clearInterval(this.interval)
+                        
                 }
                 {this.state.name ?(
                     <button onClick={()=>{this.handleClick()}}>start fight</button>
