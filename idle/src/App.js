@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import Warehouse from './containers/Warehouse';
+import Shack from './containers/Shack';
 import BlacksmithStore from './containers/BlacksmithStore';
 import Stables from './containers/Stables';
 import TavernInn from './containers/TavernInn';
@@ -40,20 +40,17 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-        
         <Town />
         <Route exact path="/" render={() => <UserHome />} />
         <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} />
-        <Route exact path="/warehouse" render={() => <Warehouse />} />
+        <Route exact path="/shack" render={() => <Shack />} />
         <Route exact path="/blacksmithstore" render={() => <BlacksmithStore />} />
         <Route exact path="/stables" render={() =>{
           return <Stables monster={this.state.currentMonster} onMonsterClick={this.onMonsterClick}/>} 
           } />
         <Route exact path="/taverninn" render={() => <TavernInn />} />
         <Route exact path="/monsterfight" render={() => <MonsterFight monster={this.state.currentMonster}/>} />
-      </div>
-      
-      
+        </div>
     </Router>
     )
   }

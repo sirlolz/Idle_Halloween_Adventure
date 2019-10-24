@@ -12,9 +12,10 @@ class Stables extends React.Component {
     }
 
     MonsterTravelButton = () => {
-        return this.state.monster.map( (monster, index)=>{
+         return <div className="monsterList">{this.state.monster.map( (monster, index)=>{
             return <MonsterCard key={index} monster={monster} onMonsterClick={this.props.onMonsterClick}/>
-        })
+        })} </div>
+       
     }
 
 
@@ -24,11 +25,12 @@ class Stables extends React.Component {
     render () {
         return (
             <>
-                <h3>welcome to the stables</h3>
-                <p>jump on a horse and fighting the <b><em>EVIL</em></b> in this world</p>
-                <div className="monsterList">
-                    <div >{this.MonsterTravelButton()}</div>
-                </div>
+                <h2>Welcome to the stables.</h2>
+                <p>Jump on a horse and fight the <b><em>EVIL</em></b> in this world.</p>
+                <p>Current Wanted List:</p>
+                
+                    {this.MonsterTravelButton()}
+               
             </>)
     }
 }
