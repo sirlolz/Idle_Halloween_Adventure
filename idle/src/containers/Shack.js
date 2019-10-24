@@ -1,5 +1,5 @@
 import React from 'react'
-class Warehouse extends React.Component {
+class Shack extends React.Component {
     render () {
         return (
             <div>
@@ -9,4 +9,4 @@ class Warehouse extends React.Component {
         )
     }
 }
-export default Warehouse
+export default Shack
