@@ -11,6 +11,7 @@ import Stables from './containers/Stables';
 import TavernInn from './containers/TavernInn';
 import MonsterFight from './components/MonsterFight'
 import Login from './components/Login'
+import UserHome from './components/UserHome'
 class App extends React.Component {
 
   state = {
@@ -25,10 +26,10 @@ class App extends React.Component {
       method: "POST",
       headers:{
           "Content-Type": "application/json",
-                  Accept: "application/json"
+                  "Accept": "application/json"
               },
               body: JSON.stringify({name: user})
-  }))
+  })).then(response => response.json())
   }
 
   onMonsterClick = monster =>{
@@ -41,7 +42,7 @@ class App extends React.Component {
         <div>
         
         <Town />
-        <Route exact path="/" render={() => <div>Home</div>} />
+        <Route exact path="/" render={() => <UserHome />} />
         <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} />
         <Route exact path="/warehouse" render={() => <Warehouse />} />
         <Route exact path="/blacksmithstore" render={() => <BlacksmithStore />} />

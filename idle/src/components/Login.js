@@ -1,8 +1,10 @@
 import React from 'react'
 import '../css/Login.css'
+import { Redirect } from 'react-router-dom'
 class Login extends React.Component {
     state = {
-        value: ''
+        value: '',
+        redirect: false
     };
 
     handleChange = event => {
@@ -12,9 +14,12 @@ class Login extends React.Component {
     handleClick = event =>{
         event.preventDefault()
         this.props.onLogin(this.state.value)
-        console.log(this.state.value)
+        this.setState({redirect: true})
     }
     render() {
+        if (this.state.redirect === true){
+            return <Redirect to="/" />
+        }
         return (
             <form>
                 <div className="login">
