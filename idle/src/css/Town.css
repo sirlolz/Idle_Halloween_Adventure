@@ -6,11 +6,13 @@
 
 #sidebar {
     position: fixed;
-    width:200px;
+    width:25vh;
     height:100%;
     background:#151719;
-    left: -200px;
-    transition: all 500ms linear
+    /* left: -200px; */
+    left: -24vh;
+    transition: all 500ms linear;
+    /* overflow: scroll; */
 }
 
 #sidebar.active {
@@ -20,13 +22,18 @@
 #sidebar ul li {
     color:rgba(230,230,230,0.9);
     list-style: none;
-    padding: 15px 10px;
+    padding: 5% 5%;
     border-bottom: 1px solid rgba(100,100,100,0.3);
+    /* height: 20%; */
+}
+
+#sidebar ul li a img{
+    height: 17.3vh;
 }
 #sidebar .toggle-btn {
     position: absolute;
-    left: 230px;
-    top: 20px;
+    left: 28vh;
+    top: 4vh;
 }
 #sidebar .toggle-btn span {
     display:block;
@@ -35,22 +42,3 @@
     background: #151719;
     margin: 5px 0px; 
 }
-/* .gallery {
-
-    width: 15%;
-    display: grid;
-    grid-template-rows: repeat(4, 11vw);
-    position: fixed;
-    left: 0px;
-}
-
-.gallery__img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.gallery__item {
-    margin: 0;
-    object-fit: contain
-} */

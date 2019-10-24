@@ -3,7 +3,9 @@ export default class MonsterFight extends React.Component {
     state = {
         hp: this.props.monster.hp,
         name: this.props.monster.name,
-        att: 0
+        att: 0,
+        fightStarted: false,
+        monsterDead: false
     }
 
     //this needs to fetch the users info
@@ -15,7 +17,12 @@ export default class MonsterFight extends React.Component {
     //on click of fight button decreases monster hp stored in state by users att
     handleClick = () => {
         this.setState({hp:this.props.monster.hp})
-        this.interval = setInterval(()=>{this.setState({hp: (this.state.hp - this.state.att)})},1000)
+        this.interval = setInterval(()=>{
+            this.setState({
+                hp: (this.state.hp - this.state.att)
+            })
+        },1000)
+        
     }
 
     //resets monster hp
@@ -37,7 +44,7 @@ export default class MonsterFight extends React.Component {
                     {this.state.name}
                 </h1>
                 {   this.state.hp > 0 ?
-                        <h2>{this.state.hp}</h2>
+                        <h2>{this.props.monster.name} has {this.state.hp} hp remaining!</h2>
                     :
                         clearInterval(this.interval)
                 }

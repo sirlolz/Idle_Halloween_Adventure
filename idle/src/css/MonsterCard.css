@@ -1,0 +1,24 @@
+.card{
+ height: 37vh;
+ width: 26vh;
+ background-image: url('https://i.pinimg.com/originals/0d/c3/44/0dc344feb7f8473d2bebdf8ba00c8ef0.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+#name{
+    text-align:center;
+    padding-top: 1.37vh;
+    margin: 0px;
+    font-size: 2.0vh;
+    font-family: 'Source Code Pro', Joystix;
+
+}
+
+#button {
+    padding-top: 27.2vh;
+    padding-left: 11.1vh;
+    font-family: 'Source Code Pro', Joystix;
+        /* background: rgb(255, 255, 255); */
+      
+}

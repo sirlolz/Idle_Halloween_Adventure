@@ -1,17 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../css/MonsterCard.css'
+
 export default class MonsterCard extends React.Component {
     state = {
 
     }
     render () {
         return ( 
-       
-            <div>
-                <h3>take your horse to {this.props.monster.name}'s lair</h3>
-                <Link to="/monsterfight" onClick={() => this.props.onMonsterClick(this.props.monster)}>
-                    <button> <b>lets go</b></button>
-                </Link>
+            
+            <div className="card">
+                <div>
+                    <h3 id="name">{this.props.monster.name}</h3>
+                
+                    <Link to="/monsterfight" onClick={() => this.props.onMonsterClick(this.props.monster)}>
+                    <div id="button"><button> <b>Fight</b></button></div>
+                    </Link> 
+                </div>
+                
             </div>
 
    
