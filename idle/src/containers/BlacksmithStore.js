@@ -9,15 +9,6 @@ class BlacksmithStore extends React.Component {
         fetch("http://localhost:3000/items").then(r => r.json()).then(d => this.setState({forSale:d}))
     }
 
-    // showForSale=()=>{
-    //     return this.state.forSale.map((item,key)=>{
-    //         return <ItemCard key={key} item={item}/>
-    //     })
-    // }
-    // componentDidMount(){
-    //     this.showForSale
-    // }
-
     renderItems = () => {
         return this.state.forSale.map((item, key)=> {
            return <Items item={item} key={key} />
@@ -35,7 +26,6 @@ class BlacksmithStore extends React.Component {
                 <div>
                 {this.renderItems()}
                 </div>
-                {/* need to render each item individually use map */}
             </div>
         )
     }

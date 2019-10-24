@@ -9,7 +9,7 @@ import Shack from './containers/Shack';
 import BlacksmithStore from './containers/BlacksmithStore';
 import Stables from './containers/Stables';
 import TavernInn from './containers/TavernInn';
-import MonsterFight from './components/MonsterFight'
+import MonsterFight from './containers/MonsterFight'
 import Login from './components/Login'
 import UserHome from './components/UserHome'
 class App extends React.Component {

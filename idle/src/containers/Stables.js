@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import MonsterCard from "./MonsterCard"
 import '../css/Stables.css'
+
 class Stables extends React.Component {
   
     state = {
@@ -13,7 +15,9 @@ class Stables extends React.Component {
 
     MonsterTravelButton = () => {
          return <div className="monsterList">{this.state.monster.map( (monster, index)=>{
-            return <MonsterCard key={index} monster={monster} onMonsterClick={this.props.onMonsterClick}/>
+            return <Link to="/monsterfight" onClick={() => this.props.onMonsterClick(this.props.monster)}>
+                <MonsterCard key={index} monster={monster} onMonsterClick={this.props.onMonsterClick}/>
+                </Link>
         })} </div>
        
     }

@@ -10,8 +10,6 @@ class Town extends React.Component{
     }
 
     toggleSideBar=()=>{
-        // document.getElementById("sidebar").classList.toggle('active')
-        console.log("clicked burger")
         const node = this.myRef.current
         node.classList.toggle('active')
     }
