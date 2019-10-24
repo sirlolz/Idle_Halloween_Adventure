@@ -4,6 +4,11 @@
  background-image: url('https://i.pinimg.com/originals/0d/c3/44/0dc344feb7f8473d2bebdf8ba00c8ef0.png');
  background-size: cover;
  background-repeat: no-repeat;
+ transition: transform .2s;
+}
+
+.card:hover{
+    transform: scale(1.1);
 }
 
 #name{
@@ -15,10 +20,9 @@
 
 }
 
-#button {
-    padding-top: 27.2vh;
-    padding-left: 11.1vh;
-    font-family: 'Source Code Pro', Joystix;
-        /* background: rgb(255, 255, 255); */
-      
+#img {
+    width: 18vh;
+    padding-left: 4vh;
+    padding-top: 1vh;
+    height: 24vh;    
 }

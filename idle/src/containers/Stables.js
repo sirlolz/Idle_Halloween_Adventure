@@ -26,8 +26,7 @@ class Stables extends React.Component {
         return (
             <>
                 <h2>Welcome to the stables.</h2>
-                <p>Jump on a horse and fight the <b><em>EVIL</em></b> in this world.</p>
-                <p>Current Wanted List:</p>
+                <p>Jump on a horse and fight the <b><em>EVIL</em></b> in this world. Current Wanted List:</p>
                 
                     {this.MonsterTravelButton()}
                

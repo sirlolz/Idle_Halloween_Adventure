@@ -51,9 +51,9 @@ class Town extends React.Component{
                     </Link>
                 </figure></li>
                     <li><figure>
-                    <Link to="/warehouse">
+                    <Link to="/shack">
                     <img src="https://i.imgur.com/J9hLmCj.png" 
-                    alt="warehouse" width="100%" height="100%"/>
+                    alt="shack" width="100%" height="100%"/>
                     </Link>
                 </figure></li>
                 </ul>

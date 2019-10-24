@@ -32,8 +32,8 @@
 }
 #sidebar .toggle-btn {
     position: absolute;
-    left: 28vh;
-    top: 4vh;
+    left: 110%;
+    top: 2%;
 }
 #sidebar .toggle-btn span {
     display:block;
