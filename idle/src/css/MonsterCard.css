@@ -5,6 +5,7 @@
  background-size: cover;
  background-repeat: no-repeat;
  transition: transform .2s;
+ background-color: black;
 }
 
 .card:hover{
@@ -21,8 +22,9 @@
 }
 
 #img {
-    width: 18vh;
-    padding-left: 4vh;
+    width: 60%;
+    /* overflow: hidden; */
+    padding-left: 6vh;
     padding-top: 1vh;
-    height: 24vh;    
+    /* height: auto;     */
 }
