@@ -58,7 +58,7 @@ export default class MonsterFight extends React.Component {
                     <h2>{this.props.user.name} VS {this.props.monster.name}</h2> 
                 <MonsterCard fightStarted={this.state.fightStarted} user={this.props.user} monster={this.state.monster}/>
                     <button className="start-btn" onClick={()=>{this.handleClick()}}>START</button>
-                    <textarea rows="4" cols="50">{this.fightLog()}</textarea>
+                    {/* <textarea rows="4" cols="50">{this.fightLog()}</textarea> */}
                 </div>
             )
         }
