@@ -1,3 +1,11 @@
+body{
+    background: url('https://i.imgur.com/ByzKQXS.png');
+    background-size: 1440px 900px ;
+
+    background-repeat: no-repeat;
+    /* width: 100% */
+}
+
 .login {
     text-align: center;
     font-size: 200%;
