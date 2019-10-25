@@ -5,7 +5,7 @@
  background-size: cover;
  background-repeat: no-repeat;
  transition: transform .2s;
- background-color: black;
+ background-color: rgb(46, 46, 46);
 }
 
 .card:hover{
