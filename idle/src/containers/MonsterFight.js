@@ -22,7 +22,7 @@ export default class MonsterFight extends React.Component {
     //clears fight interval
     //needs to update user on the backend with loot
     resetUpdateFight = () => {
-        clearInterval(this.interval)
+        // clearInterval(this.interval)
         this.setState({monster: {...this.props.monster}});
     }
 
@@ -36,7 +36,7 @@ export default class MonsterFight extends React.Component {
         console.log()
             return (
                 <div>
-                <MonsterCard monster={this.state.monster}/>
+                <MonsterCard user={this.props.user} monster={this.state.monster}/>
                     <button onClick={()=>{this.handleClick()}}>start fight</button>
                 </div>
             )
