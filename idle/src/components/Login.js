@@ -22,8 +22,8 @@ class Login extends React.Component {
         }
         return (
             <form>
-                <div className="login">
-                <h1>Welcome to Idle Halloween Adventure</h1>
+                <div >
+                <h1 className="login">Welcome to Idle Halloween Adventure</h1>
                 <input 
                 id="username"
                 type="text" 

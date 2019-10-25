@@ -2,19 +2,24 @@ import React from 'react'
 import MonsterCard from './MonsterCard'
 export default class MonsterFight extends React.Component {
     state = {
-        monster:{...this.props.monster}
+        monster:{...this.props.monster},
         // user: {...this.props.user}       //dont think we need user in state
+        fightStarted: false
     }
 
     //on click of fight button decreases monster.hp by user.att stored in state
     handleClick = () => {
-        this.setState({monster: {...this.props.monster}});
+        this.setState({
+            monster: {...this.props.monster},
+            fightStarted: true
+        });
         this.interval = setInterval(() => {
             if (this.state.monster.hp <= 0){
                 this.resetUpdateFight();
                 this.props.onFightWin(this.state.monster.loot);
             }
-            this.setState(prev => {return{...prev, monster:{...prev.monster,hp: prev.monster.hp - this.props.user.att}}})}, 1000)
+            this.setState(prev => {
+                return{...prev, monster:{...prev.monster,hp: prev.monster.hp - this.props.user.att}}})}, 1000)
             
     }
 
@@ -36,7 +41,7 @@ export default class MonsterFight extends React.Component {
         console.log()
             return (
                 <div>
-                <MonsterCard user={this.props.user} monster={this.state.monster}/>
+                <MonsterCard fightStarted={this.state.fightStarted} user={this.props.user} monster={this.state.monster}/>
                     <button onClick={()=>{this.handleClick()}}>start fight</button>
                 </div>
             )

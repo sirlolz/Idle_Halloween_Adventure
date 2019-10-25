@@ -11,6 +11,7 @@
  transition: transform .2s;
  background-color: rgb(46, 46, 46);
  position: relative;
+ box-shadow: 0 2px 5px rgb(211, 16, 16);
 }
 
 .card:hover{
@@ -35,16 +36,16 @@
 }
 
 #hp{
-   font-size: 200%;
-    color: green;
+   font-size: 50%;
+    color: rgb(0, 0, 0);
     text-align: center;
     /* vertical-align: bottom; */
-    top: -50px;
+    top: 7vh;
     position: relative;
-    height: auto;
-    width: auto;
+    /* height: ; */
+    width: 22vh;
     /* bottom: vh; */
-    /* left: 0; */
+    left: 2vh;
     /* top: 0; */
     /* display: flex;
     align-items: flex-end */
