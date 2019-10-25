@@ -10,7 +10,7 @@ export default class MonsterFight extends React.Component {
     handleClick = () => {
         this.setState({monster: {...this.props.monster}});
         this.interval = setInterval(() => {
-            if (this.state.monster.hp < 0){
+            if (this.state.monster.hp <= 0){
                 this.resetUpdateFight();
                 this.props.onFightWin(this.state.monster.loot);
             }
@@ -22,8 +22,11 @@ export default class MonsterFight extends React.Component {
     //clears fight interval
     //needs to update user on the backend with loot
     resetUpdateFight = () => {
+        clearInterval(this.interval)
         this.setState({monster: {...this.props.monster}});
     }
+
+
 
     render() {
         console.log()
