@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/Button.css'
 
 class SaveUser extends React.Component{
 
@@ -19,7 +20,7 @@ class SaveUser extends React.Component{
     render(){
         return(
             <div>
-                <button onClick={()=>this.handleSave(this.props.currentUser)}>Save User</button>
+                <button className="start-btn" onClick={()=>this.handleSave(this.props.currentUser)}>Save User</button>
             </div>
         )
     }

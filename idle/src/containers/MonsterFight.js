@@ -1,5 +1,7 @@
 import React from 'react'
 import MonsterCard from './MonsterCard'
+import '../css/MonsterFight.css'
+
 export default class MonsterFight extends React.Component {
     state = {
         monster:{...this.props.monster},
@@ -9,6 +11,9 @@ export default class MonsterFight extends React.Component {
 
     //on click of fight button decreases monster.hp by user.att stored in state
     handleClick = () => {
+        if (this.interval){
+            clearInterval(this.interval)
+        }
         this.setState({
             monster: {...this.props.monster},
             fightStarted: true
@@ -36,14 +41,32 @@ export default class MonsterFight extends React.Component {
         clearInterval(this.interval)
     }
 
+    fightLog=()=>{
+        if (this.state.fightStarted === false){
+            return `${this.props.monster.hp} HP`
+        } else if (this.state.fightStarted === true){
+            return (`You slash ${this.props.monster.name} for 1 point of damage! ${this.props.monster.name} has ${this.props.monster.hp} HP remaining. Total gold: ${this.props.user.purse}`)
+        }
+    }
+
 
     render() {
         console.log()
             return (
-                <div>
+                <div id="monstercardinmonsterfight">
+                    <header>Let's get ready to rumble!</header>
+                    <h2>{this.props.user.name} VS {this.props.monster.name}</h2> 
                 <MonsterCard fightStarted={this.state.fightStarted} user={this.props.user} monster={this.state.monster}/>
-                    <button onClick={()=>{this.handleClick()}}>start fight</button>
+                    <button className="start-btn" onClick={()=>{this.handleClick()}}>START</button>
+                    <textarea rows="4" cols="50">{this.fightLog()}</textarea>
                 </div>
             )
         }
-    }
+}
+
+    // return this.props.monster.hp > 0? `You slash ${this.props.monster.name} for 1 damage! ${this.props.monster.name} has ${this.props.monster.hp} remaining.` : `Monster defeated! You now have ${this.props.user.purse} gold`
+    // if (this.props.fightStarted === false){
+    //     return `${this.props.monster.hp} HP`
+    // } else if (this.props.fightStarted === true){
+    //     return (`You slash ${this.props.monster.name} for 1 point of damage! ${this.props.monster.name} has ${this.props.monster.hp} HP remaining. Total gold: ${this.props.user.purse}`)
+    // }

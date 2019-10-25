@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-
+import '../css/Button.css'
 class DeleteUser extends React.Component{
     
     state = {
@@ -27,7 +27,7 @@ class DeleteUser extends React.Component{
         }
         return(
             <div>
-                <button onClick={()=>this.handleDelete(this.props.currentUser)}>Delete User</button>
+                <button className="start-btn" onClick={()=>this.handleDelete(this.props.currentUser)}>Delete User</button>
             </div>
         )
     }

@@ -33,7 +33,7 @@ class Login extends React.Component {
                 type="text" 
                 placeholder="            Password" 
                 onChange={this.handleChangePassword}/> */}
-                <input type="submit" value="login" onClick={e =>this.handleClick(e)}/>
+                <input className="start-btn" type="submit" value="login" onClick={e =>this.handleClick(e)}/>
                 </div>
             </form>
             

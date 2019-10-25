@@ -5,6 +5,7 @@
  width: 26vh;
  
  background-image: url('https://i.imgur.com/o59ONmO.jpg');
+ /* background-position: center center; */
 
  background-size: cover;
  background-repeat: no-repeat;
@@ -16,6 +17,8 @@
 
 .card:hover{
     transform: scale(1.1);
+    /* top: -2px; */
+    box-shadow: 0 4px 5px rgba(16, 139, 57, 0.568);
 }
 
 #name{
@@ -36,7 +39,7 @@
 }
 
 #hp{
-   font-size: 50%;
+    font-size: 300%;
     color: rgb(0, 0, 0);
     text-align: center;
     /* vertical-align: bottom; */

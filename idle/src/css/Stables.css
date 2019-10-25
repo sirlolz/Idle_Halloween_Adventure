@@ -3,16 +3,27 @@
     /* grid-template-columns: 300px 300px 300px;
      */
      /* grid-template-columns: 20% 20% 20% 20% 20%; */
-     grid-template-columns: auto auto auto auto  ;
-     grid-template-rows: auto auto auto auto auto;
+     grid-template-columns: auto auto auto auto auto ;
+     /* grid-template-rows: auto auto auto auto auto; */
      /* align-content: center; */
      /* justify-content: center; */
     /* transform: scale(1); */
-    grid-gap: 1vh;
+    grid-gap: 3vh;
     /* background-color: #fff; */
     color: #444;
+    margin: 5vh
   }
+
+#stableswelcome {
+position: absolute;
+left: 30%;
+top: 4vh;
+align-content: center;
+}
+#stablesjump{
+  position: absolute;
   
+}
 /* .box {
     background-color: #444;
     color: #fff;

@@ -1,10 +1,10 @@
-.login {
-    text-align: center;
-    font-size: 200%;
-
+#monstercardinmonsterfight{
+    /* transform: scale(2); */
+    /* bottom: 50px; */
+    margin-bottom: 0vh;
 }
 
-.start-btn{
+  .start-btn{
     text-align: center;
     display: inline-block;
     margin:10vh;
@@ -21,12 +21,10 @@
     cursor: pointer;
     font-family: Joystix;
     transform: scale(1.5)
-
-    
-}
-.start-btn:active {
+  }
+ .start-btn:active {
     box-shadow: none;
     position: relative;
     top: .2em;
     transform: scale(10)
-}
+  }
