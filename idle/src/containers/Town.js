@@ -15,6 +15,7 @@ class Town extends React.Component{
     }
 
     render(){
+        console.log(this.props.loggedin)
         if (this.props.loggedin === false){
             return <Redirect to="/login" />
         }
