@@ -37,8 +37,9 @@ class App extends React.Component {
     this.setState({currentMonster:{...monster}})
   }
 
-  onFightWin = () => {
+  onFightWin = loot => {
     
+    this.setState(prev => {return{...prev, currentUser:{...prev.currentUser, purse: prev.currentUser.purse += loot}}})
   }
 
   render() {
@@ -58,7 +59,7 @@ class App extends React.Component {
 
         <Route exact path="/taverninn" render={() => <TavernInn />} />
 
-        <Route exact path="/monsterfight" render={() => <MonsterFight monster={this.state.currentMonster} user={this.state.currentUser}/>} />
+        <Route exact path="/monsterfight" render={() => <MonsterFight monster={this.state.currentMonster} user={this.state.currentUser} onFightWin={this.onFightWin}/>} />
 
         </div>
     </Router>

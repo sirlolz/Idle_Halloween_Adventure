@@ -12,7 +12,7 @@ export default class MonsterFight extends React.Component {
         this.interval = setInterval(() => {
             if (this.state.monster.hp < 0){
                 this.resetUpdateFight();
-                this.props.onFightWin()
+                this.props.onFightWin(this.state.monster.loot);
             }
             this.setState(prev => {return{...prev, monster:{...prev.monster,hp: prev.monster.hp - this.props.user.att}}})}, 1000)
             
@@ -26,6 +26,7 @@ export default class MonsterFight extends React.Component {
     }
 
     render() {
+        console.log()
             return (
                 <div>
                 <MonsterCard monster={this.state.monster}/>
