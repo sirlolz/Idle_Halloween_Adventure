@@ -6,11 +6,15 @@ export default class MonsterCard extends React.Component {
 
     render () {
         return ( 
+          <>
                 <div className="card">
                     <h3 id="name">{this.props.monster.name}</h3>
                     <img id="img" alt="uhoh" src={this.props.monster.img} />
-                    <p>{this.props.monster.hp}</p>
+                    <div id="hp">
+                        <h4 >{this.props.monster.hp} HP</h4>
+                    </div>
                  </div>
+            </>
         )
     }
 }

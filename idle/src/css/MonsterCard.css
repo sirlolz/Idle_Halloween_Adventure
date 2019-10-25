@@ -1,11 +1,14 @@
 .card{
  height: 37vh;
  width: 26vh;
- background-image: url('https://i.pinimg.com/originals/0d/c3/44/0dc344feb7f8473d2bebdf8ba00c8ef0.png');
+ 
+ background-image: url('https://i.imgur.com/o59ONmO.jpg');
+
  background-size: cover;
  background-repeat: no-repeat;
  transition: transform .2s;
  background-color: rgb(46, 46, 46);
+ position: relative;
 }
 
 .card:hover{
@@ -27,4 +30,20 @@
     padding-left: 6vh;
     padding-top: 1vh;
     /* height: auto;     */
+}
+
+#hp{
+   font-size: 200%;
+    color: green;
+    text-align: center;
+    /* vertical-align: bottom; */
+    top: -50px;
+    position: relative;
+    height: auto;
+    width: auto;
+    /* bottom: vh; */
+    /* left: 0; */
+    /* top: 0; */
+    /* display: flex;
+    align-items: flex-end */
 }

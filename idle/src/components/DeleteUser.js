@@ -12,7 +12,7 @@ class DeleteUser extends React.Component{
         fetch(`http://localhost:3000/users/${currentUser.id}`,{
             method: 'DELETE',
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({id: currentUser.id})
         }).then(this.setState({
