@@ -1,38 +1,36 @@
 import React from 'react'
-import FightView from '../components/FightView'
+import MonsterCard from './MonsterCard'
 export default class MonsterFight extends React.Component {
-    state = {...this.props.monster}
-
-    //this needs to fetch the users info
-    fetchUserInfo = () => {
-        this.setState({att: 2})
+    state = {
+        monster:{...this.props.monster}
+        // user: {...this.props.user}       //dont think we need user in state
     }
 
-
-    //on click of fight button decreases monster hp stored in state by users att
+    //on click of fight button decreases monster.hp by user.att stored in state
     handleClick = () => {
-        this.interval = setInterval(()=>{
-            console.log(this.state)
-            this.setState({
-                hp: (this.state.hp - this.state.att)
-            })
-        },1000)
-        
+        this.setState({monster: {...this.props.monster}});
+        this.interval = setInterval(() => {
+            if (this.state.monster.hp < 0){
+                this.resetUpdateFight();
+                this.props.onFightWin()
+            }
+            this.setState(prev => {return{...prev, monster:{...prev.monster,hp: prev.monster.hp - this.props.user.att}}})}, 1000)
+            
     }
 
     //resets monster hp
     //clears fight interval
     //needs to update user on the backend with loot
     resetUpdateFight = () => {
-        this.setState({hp:this.props.monster.hp})
+        this.setState({monster: {...this.props.monster}});
     }
 
     render() {
-        return (
-            <div>
-                <FightView monster={this.state}/>
+            return (
+                <div>
+                <MonsterCard monster={this.state.monster}/>
                     <button onClick={()=>{this.handleClick()}}>start fight</button>
-            </div>
-        )
+                </div>
+            )
+        }
     }
-}
