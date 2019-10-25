@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Town.css'
-import { Link } from 'react-router-dom'
+import { Link, Redirect} from 'react-router-dom'
 
 class Town extends React.Component{
     
@@ -15,6 +15,9 @@ class Town extends React.Component{
     }
 
     render(){
+        if (this.props.loggedin === false){
+            return <Redirect to="/login" />
+        }
 
         return(    
             <div id="sidebar" ref={this.myRef}>

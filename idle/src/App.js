@@ -3,7 +3,8 @@ import '../src/css/App.css';
 import Town from './containers/Town'
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 import Shack from './containers/Shack';
 import BlacksmithStore from './containers/BlacksmithStore';
@@ -29,7 +30,7 @@ class App extends React.Component {
                   "Accept": "application/json"
               },
               body: JSON.stringify({name: user})
-  }).then(response => {return response.json()}).then(data => this.setState({currentUser:{...data}}))
+  }).then(response => {return response.json()}).then(data => this.setState({currentUser:{...data}, loggedin: true}))
   }
 
   //updates currentMonster in state when monsterCard is clicked in stables route
@@ -43,13 +44,14 @@ class App extends React.Component {
   }
 
   render() {
+
     return (
       <Router>
         <div>
         <Town />
         <Route exact path="/" render={() => <UserHome currentUser={this.state.currentUser}/>} />
 
-        <Route exact path="/login" render={() => <Login onLogin={this.onLogin}/>} />
+        <Route exact path="/login" render={() => <Login onLogin={this.onLogin} loggedin={this.state.loggedin}/>} />
 
         <Route exact path="/shack" render={() => <Shack />} />
 
