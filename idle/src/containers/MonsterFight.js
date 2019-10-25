@@ -26,6 +26,10 @@ export default class MonsterFight extends React.Component {
         this.setState({monster: {...this.props.monster}});
     }
 
+    // clear interval twice incase user leaves page before monster is defeated
+    componentWillUnmount(){
+        clearInterval(this.interval)
+    }
 
 
     render() {
