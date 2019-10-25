@@ -1,5 +1,6 @@
 import React from 'react'
 import DeleteUser from './DeleteUser'
+import SaveUser from './SaveUser'
 
 export default class UserView extends React.Component {
     render () {
@@ -7,8 +8,8 @@ export default class UserView extends React.Component {
         return <div>
             <h2>hello{this.props.currentUser.name}</h2>
             <DeleteUser currentUser={this.props.currentUser}/>
+            <SaveUser currentUser={this.props.currentUser}/>
             <p>your moola$$$$::{this.props.currentUser.purse}</p>
         </div>
     }
-
 }
