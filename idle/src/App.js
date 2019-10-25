@@ -3,8 +3,7 @@ import '../src/css/App.css';
 import Town from './containers/Town'
 import {
   BrowserRouter as Router,
-  Route,
-  Redirect
+  Route
 } from 'react-router-dom';
 import Shack from './containers/Shack';
 import BlacksmithStore from './containers/BlacksmithStore';
@@ -48,10 +47,10 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-        <Town />
+        <Town loggedin={this.state.loggedin}/>
         <Route exact path="/" render={() => <UserHome currentUser={this.state.currentUser}/>} />
 
-        <Route exact path="/login" render={() => <Login onLogin={this.onLogin} loggedin={this.state.loggedin}/>} />
+        <Route exact path="/login" render={() => <Login onLogin={this.onLogin} />} />
 
         <Route exact path="/shack" render={() => <Shack />} />
 
